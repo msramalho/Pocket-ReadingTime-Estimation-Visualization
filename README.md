@@ -3,12 +3,13 @@ Calculate the amount of time each Pocket Article will take reading by adding a t
 
 # Dependencies
 To run this script you need to install the following packages:
-	pip install pocket-api
-	pip install pocket-cli
-	pip install beautifulsoup4
-	pip install requests
-	pip install newspaper3k
-	
+```
+pip install pocket-api
+pip install pocket-cli
+pip install beautifulsoup4
+pip install requests
+pip install newspaper3k
+```
 # Usage
 
  1. Edit the configurations file and add your *consumer_key* ([get it here](https://getpocket.com/developer/apps/new)) and your access_token ([get it here](http://reader.fxneumann.de/plugins/oneclickpocket/auth.php))
