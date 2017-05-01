@@ -1,6 +1,6 @@
 {
     "consumer_key": "your-consumer-key",
-    "access_token": "yuor-access-token",
+    "access_token": "your-access-token",
     "delete_other_tags": 0,
     "count_articles_to_tag": 0,
     "add_tags": 1,
