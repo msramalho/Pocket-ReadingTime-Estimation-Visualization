@@ -3,13 +3,10 @@ from pocket import Pocket, PocketException
 from bs4 import BeautifulSoup
 from newspaper import Article
 
-def getConfigs():
-	with open('configs.json') as configsFile:    
-		return json.load(configsFile)
-		
-configs = getConfigs()
+with open('configs.json') as configsFile:#read the configuration file
+	configs = json.load(configsFile)
 
-p = Pocket(consumer_key=configs["consumer_key"], access_token=configs["access_token"])
+p = Pocket(consumer_key=configs["consumer_key"], access_token=configs["access_token"])#get the pocket interface object
 
 def getArticleTime(text):
 	req = requests.post("http://niram.org/read/", {"words":text})
@@ -25,7 +22,12 @@ def roundTime(minutes):#rounds 0 to 0, 1 to 5, 5 to 5, 6 to 10, 10 to 10, etc
 def getArticle(a):
 	article = Article(a["given_url"])
 	article.download()
-	article.parse()
+	if article.is_downloaded:
+		article.parse()
+	else:
+		print("Unable to download article: %s\nPrevious changes will be committed" % a["resolved_title"])
+		p.commit()
+		exit(1)
 	return article
 
 try:
@@ -33,7 +35,6 @@ try:
 	print("Found %d articles, starting: \n" % len(articles["list"].items()))
 	articlePos = 0#display count
 	for id, data in articles["list"].items():
-		articlePos+=1
 		article = getArticle(data)
 		minutes = getArticleTime(article.text)
 		print("\nArticle %d: %s\n%s minutes\n%s rounded minutes" % (articlePos, data["resolved_title"], minutes, roundTime(minutes)))
