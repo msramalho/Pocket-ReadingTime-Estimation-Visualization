@@ -13,7 +13,7 @@ pip install newspaper3k
 # Usage
 
  1. Edit the [configurations file](https://github.com/msramalho/Pocket-ReadingTime-Estimation-Visualization/blob/master/configs.json) and add your *consumer_key* ([get it here](https://getpocket.com/developer/apps/new)) and your access_token ([get it here](http://reader.fxneumann.de/plugins/oneclickpocket/auth.php))
- 2. execute the file: `python .\main.py` and watch the progress
+ 2. Execute the file: `python .\main.py` and watch the progress
 
 # Configurations
 
