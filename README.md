@@ -17,7 +17,7 @@ pip install newspaper3k
 
 # Configurations
 
-- *consumer_key* - API specific key for each deployment, see detailed instrucions [here](https://github.com/rakanalh/pocket-cli#configuration)
+- *consumer_key* - API specific key for each deployment, see detailed instructions [here](https://github.com/rakanalh/pocket-cli#configuration)
 - *access_token* - API specific key for each account
 - *delete_other_tags* - 1 if you want all other article tags to be removed, 0 if you want to leave them be
 - *count_articles_to_tag* - specify how many articles to parse, 0 means all
