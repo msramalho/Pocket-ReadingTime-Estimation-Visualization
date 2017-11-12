@@ -17,11 +17,11 @@ def getArticleTime(text):
 
 def roundTime(minutes): #rounds 0 to 0, 1 to 5, 5 to 5, 6 to 10, 10 to 10, etc
     return minutes + 5 - (minutes % 5) if minutes % 10 != 0 else minutes
-    
+
 def getArticle(a):
     article = Article(a["given_url"])
     article.download()
-    if article.is_downloaded:
+    if  hasattr(article, 'is_downloaded') and article.is_downloaded:
         article.parse()
     else:
         print("Unable to download article: %s\nPrevious changes will be committed" % a["resolved_title"])
