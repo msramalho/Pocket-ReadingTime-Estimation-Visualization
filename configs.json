@@ -2,6 +2,7 @@
     "consumer_key": "your-consumer-key",
     "access_token": "your-access-token",
     "delete_other_tags": 0,
+	"offset_articles_start": 0,
     "count_articles_to_tag": 0,
     "add_tags": 1,
     "commit_tags_only_at_the_end": 0
