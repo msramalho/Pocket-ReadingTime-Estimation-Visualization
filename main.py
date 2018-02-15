@@ -37,7 +37,8 @@ try:
 		articlePos+=1 #increment article count
 		article = getArticle(data)
 		minutes = getArticleTime(article.text)
-		print("\nArticle %d: %s\n%s minutes\n%s rounded minutes" % (articlePos, data["resolved_title"], minutes, roundTime(minutes)))
+		title = data["resolved_title"] if "resolved_title" in data else "No Title Available"
+		print("\nArticle %d: %s\n%s minutes\n%s rounded minutes" % (articlePos, title, minutes, roundTime(minutes)))
 		if configs["delete_other_tags"]: #delete other tags is set to true
 			p.tags_clear(id)
 		if configs["add_tags"]: #add tags is set to true
