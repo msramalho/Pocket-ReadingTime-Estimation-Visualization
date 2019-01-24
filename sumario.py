@@ -36,7 +36,7 @@ def getArticle(a):
 
 
 try:
-    print("ETR;count")
+    print("ERT;count")
     for j in range(0, 19):
         cenas = 5 * j
         articles = p.retrieve(tag="%d min" % cenas, count=configs["count_articles_to_tag"])
