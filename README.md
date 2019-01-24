@@ -1,6 +1,8 @@
 # Pocket-ReadingTime-Estimation-Visualization
 Calculate the amount of time each Pocket Article will take reading by adding a tag like "10 min"
 
+Count the number of articles in each tag
+
 # Dependencies
 To run this script you need to install the following packages:
 ```
@@ -14,7 +16,7 @@ pip install newspaper3k
 
  1. Edit the [configurations file](https://github.com/msramalho/Pocket-ReadingTime-Estimation-Visualization/blob/master/configs.json) and add your *consumer_key* ([get it here](https://getpocket.com/developer/apps/new)) and your access_token ([get it here](http://reader.fxneumann.de/plugins/oneclickpocket/auth.php))
  2. Execute the file: `python .\main.py` and watch the progress
-
+ 3. Execute the file: `python .\sumario.py` to generate a table of ERT ranges and number of artic in each
 # Configurations
 
 - *consumer_key* - API specific key for each deployment, see detailed instructions [here](https://github.com/rakanalh/pocket-cli#configuration)
